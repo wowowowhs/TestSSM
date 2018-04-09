@@ -23,18 +23,11 @@ public class main {
         return "hello world";
     }
 
-    @RequestMapping("/hello")
-    @ResponseBody
-    public String hello(){
-        return "hello world123";
-    }
-
-
     @RequestMapping(value = "/generate",method = RequestMethod.GET)
     @ResponseBody
     public String generate() throws Exception {
-        //生成Excel表
 
+        //生成Excel表
         System.out.println("进入/gererate==================");
         util e = new util();
         e.generate();
@@ -42,7 +35,6 @@ public class main {
         return "生成Excel";
 
     }
-
 
     @RequestMapping(value="/func", method = RequestMethod.GET)
     //@ResponseBody
