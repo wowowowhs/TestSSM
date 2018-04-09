@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import com.springmvc.utils.*;
 
 @Controller
+@RequestMapping("/user")
 public class main {
 
     @Resource
@@ -19,6 +21,33 @@ public class main {
     @ResponseBody
     public String index(){
         return "hello world";
+    }
+
+    @RequestMapping("/hello")
+    @ResponseBody
+    public String hello(){
+        return "hello world123";
+    }
+
+
+    @RequestMapping(value = "/generate",method = RequestMethod.GET)
+    @ResponseBody
+    public String generate() throws Exception {
+        //生成Excel表
+
+        System.out.println("进入/gererate==================");
+        util e = new util();
+        e.generate();
+        System.out.println("/generate 完成=================");
+        return "生成Excel";
+
+    }
+
+
+    @RequestMapping(value="/func", method = RequestMethod.GET)
+    //@ResponseBody
+    public String func(){
+        return "function" ;
     }
 
     @RequestMapping(value = "/admin",method = RequestMethod.POST)
