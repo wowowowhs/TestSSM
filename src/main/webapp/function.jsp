@@ -13,10 +13,42 @@
         body{
             background-color: deepskyblue;
         }
+        /*
         #d1{
-            /*text-align: center;*/
+
             position:absolute;
             top:100px;
+            left:150px;
+            width:280px;
+        }
+        #d2{
+            position:absolute;
+            top:100px;
+            left:155px;
+            width:280px;
+        }
+        */
+        #fileSelect{
+            position:absolute;
+            top:100px;
+            left:150px;
+            width:280px;
+        }
+        #p{
+            position:absolute;
+            top:110px;
+            left:150px;
+            width:280px;
+        }
+        #d1{
+            position:absolute;
+            top:160px;
+            left:170px;
+            width:280px;
+        }
+        #b1{
+            position:absolute;
+            top:320px;
             left:150px;
             width:280px;
         }
@@ -48,10 +80,13 @@
 
 </head>
 <body>
-<div id="d1">
+
+
 
     <input id="fileSelect" type="file" />
-    <br><br>
+    <br>
+    <p id="p">选择需要提取的内容：</p>
+    <div id="d1">
     <form>
         <input type="checkbox" name="test" id="bike" value="Bike"> 类型 <br>
         <input type="checkbox" name="test" id="addr" value="住所"> 住所 <br>
@@ -60,12 +95,13 @@
         <input type="checkbox" name="test" id="money" value="注册资本"> 注册资本 <br>
     </form>
     <button type="button" onclick="displayResult()">显示value值</button>
-    <br><br>
-    <form action="/user/generate" method="get">
+    </div>
+
+    <form id="b1" action="/user/generate" method="get">
         <button>生成Excel</button>
     </form>
 
-</div>
+
 <!--<input value="Get File" type="button" onclick="getSelectFile();"/>-->
 <br>
 
