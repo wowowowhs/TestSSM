@@ -23,7 +23,7 @@ public class util {
         // 写入相关数据到设置的行列中去。
         cell.setCellValue("相关数据");
         // 保存到计算机相应路径daf
-        book.write( new FileOutputStream("H://a.xls"));
+        book.write( new FileOutputStream("F://a.xls"));
         System.out.println("excel.generate()完成");
     }
 
