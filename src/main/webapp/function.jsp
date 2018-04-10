@@ -9,23 +9,41 @@
 <html>
 <head>
     <title>functest</title>
+    <style>
+        body{
+            background-color: deepskyblue;
+        }
+        #d1{
+            /*text-align: center;*/
+            position:absolute;
+            top:100px;
+            left:150px;
+            width:280px;
+        }
+
+    </style>
+
     <script>
         function getSelectFile()
         {
             var fileName = document.getElementById("fileSelect").value;
             alert(fileName);
         }
-
     </script>
+
 </head>
 <body>
-文件夹选择
-<input id="fileSelect" type="file" />
-<input value="Get File" type="button" onclick="getSelectFile();"/>
+<div id="d1">
+
+    <input id="fileSelect" type="file" />
+    <br><br>
+    <form action="/user/generate" method="get">
+        <button>生成Excel</button>
+    </form>
+
+</div>
+<!--<input value="Get File" type="button" onclick="getSelectFile();"/>-->
 <br>
-<
-<form action="/user/generate" method="get">
-<button>生成Excel</button>
-</form>
+
 </body>
 </html>
