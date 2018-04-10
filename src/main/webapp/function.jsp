@@ -32,7 +32,7 @@
         }
     </script>
     <script>
-        //显示选中的复选框中的值
+        //显示选中的复选框中的值---
         function displayResult(){
             var obj = document.getElementsByName("test");
             var check_val = [];
