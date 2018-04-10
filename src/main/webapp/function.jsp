@@ -11,8 +11,10 @@
 
     <style>
         body{
+            /*background-image: url("http://localhost:8080/img/bk.jpg ");*/
             background-color: deepskyblue;
         }
+        
         /*
         #d1{
 
@@ -81,6 +83,10 @@
 </head>
 <body>
 
+
+    <marquee>
+        <span style="font-weight: bolder;font-size: 40px;color: yellow;">欢迎使用！</span>
+    </marquee>
 
 
     <input id="fileSelect" type="file" />
